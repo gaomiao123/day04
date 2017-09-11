@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		  // - 求阶乘 3!=3*2*1  5!=5*4*3*2*1;
+		  function jc(n){
+		  	var chengfa = 1;
+		  	for(var i=1;i<=n;i++){
+		  		chengfa *= i;
+		  	}
+		  	return chengfa;
+		  }
+		  console.log(jc(3));
+		   // - 求1!+2!+3!+....+n!(阶乘的和)
+		   function jcs(x){
+		   	var sum = 0;
+		   	for(var i = 0;i<=x;i++){
+		   		sum += jc(i);
+		   	}
+		   	return sum;
+		   }
+		   console.log(jcs(3));
+
+		  // - 求一组数中的最大值
+		  // 因为是求一组数中的最大值 为了表示一组数 我们使用数组来作为函数的参数
+		  function getMaxValue(arr){
+		  	var max = arr[0];
+		  	for(var i = 1;i<arr.length;i++){
+		  		if(max < arr[i]){
+		  			max = arr[i];
+		  		}
+		  	}
+		  	return max;
+		  }
+		  var a = [1,2,0,5,11,24];
+		   console.log(getMaxValue(a));
+
+	</script>
+</body>
+</html>
